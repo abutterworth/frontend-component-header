@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './scss/index.scss';
 import Input from "./Input.js";
 class FormContainer extends Component {
   constructor() {
