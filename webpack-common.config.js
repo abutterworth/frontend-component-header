@@ -12,6 +12,7 @@ module.exports = {
       },
       {
         test: /\.scss|\.css$/,
+        // include: path.join(__dirname, 'src'),
         use: [
           {
             loader: 'style-loader'
@@ -19,7 +20,6 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
               sourceMap: true,
             },
           },
@@ -27,12 +27,16 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               includePaths: [
-                path.join(__dirname, './node_modules'),
+                path.join(__dirname, 'node_modules'),
               ],
               sourceMap: true,
             },
           },
         ]
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve('url-loader'),
       },
       {
         test: /\.(woff2?|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,

@@ -1,10 +1,28 @@
 
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import { render } from "react-dom";
+import { SiteHeader } from "../../src/index.js";
+
+
+import '../../src/scss/index.scss';
 
 import './index.scss';
 
-import FormContainer from "../../src/index.js";
+import EdxLogo from './edx-sm.png';
 
-const wrapper = document.getElementById("create-article-form");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+import { MENU_ITEMS, SECONDARY_MENU_ITEMS } from './MenuItems.constants';
+
+const App = () => (
+  <div>
+    <SiteHeader 
+      menuItems={MENU_ITEMS}
+      desktopMenuItems={MENU_ITEMS}
+      logo={EdxLogo}
+      logoDestination="https://edx.org"
+      logoAltText="edX"
+      secondaryMenuItems={SECONDARY_MENU_ITEMS}
+    /> 
+  </div>
+);
+
+render(<App />, document.getElementById("root"));

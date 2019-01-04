@@ -1,3 +1,3 @@
-import FormContainer from "./FormContainer.js";
+import SiteHeader from "./SiteHeader";
 
-export default FormContainer;
+export { SiteHeader };
