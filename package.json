@@ -1,10 +1,10 @@
 {
-  "name": "@abutterworth/my-component",
+  "name": "@abutterworth/frontend-component-header",
   "version": "1.0.0",
   "description": "A test component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abutterworth/my-component.git"
+    "url": "https://github.com/abutterworth/frontend-component-header.git"
   },
   "main": "dist/main.js",
   "scripts": {

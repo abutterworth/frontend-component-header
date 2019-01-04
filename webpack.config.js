@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    library: 'my-component',
+    library: 'frontend-component-header',
     libraryTarget: 'umd',
   },
   module: commonConfig.module,
